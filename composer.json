@@ -1,0 +1,18 @@
+{
+    "name": "itgolo/houses",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Karol Golec",
+            "email": "karol.itgolo@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ITGolo\\Houses\\": [""]
+        }
+    }
+}
