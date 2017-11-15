@@ -24,6 +24,7 @@ class Houses {
      */
     function __construct() {
         $this->firewall();
+        $this->defineConstants();
         $this->loadVendor();
         $this->loadModules();
     }
@@ -56,6 +57,14 @@ class Houses {
         foreach ($modules as $module){
             $module->load();
         }
+    }
+
+    /**
+     * Define constants
+     */
+    public function defineConstants() {
+        define('HOUSES_PLUGIN_DIR', plugin_dir_path(__FILE__));
+        define('HOUSES_PLUGIN_URL', plugins_url('/', __FILE__));
     }
 
 }
