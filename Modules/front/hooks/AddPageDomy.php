@@ -38,7 +38,7 @@ class AddPageDomy implements IHook {
             ));
 
             if ($newPageId && !is_wp_error($newPageId)) {
-                update_post_meta($newPageId, '_wp_page_template', 'modules/front/views/domy-template.php');
+                update_post_meta($newPageId, '_wp_page_template', 'Modules/Front/views/domy-template.php');
             }
         }
     }

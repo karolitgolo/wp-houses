@@ -65,7 +65,7 @@ class DomyJednorodzinne extends WP_Widget {
         );
         $query = new WP_Query($argsQuery);
         $houses = $query->posts;
-        require_once HOUSES_PLUGIN_DIR . 'modules/widget/views/domy-jednorodzinne.php';
+        require_once HOUSES_PLUGIN_DIR . 'Modules/Widget/views/domy-jednorodzinne.php';
     }
 
 }

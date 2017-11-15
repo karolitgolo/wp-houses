@@ -37,7 +37,7 @@ class CreatorMetaBox implements IHook {
             'szeregowka' => 'Szeregówka'
         );
         $selectTypDomu = get_post_meta($post->ID, '_typ-domu', true); 
-        require_once HOUSES_PLUGIN_DIR . '/modules/admin/views/metabox/typy-domow.php';
+        require_once HOUSES_PLUGIN_DIR . '/Modules/Admin/views/metabox/typy-domow.php';
     }
 
 }

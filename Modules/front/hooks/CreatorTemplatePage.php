@@ -27,7 +27,7 @@ class CreatorTemplatePage implements IHook {
      */
     function hook() {
         $this->templates = array(
-            'modules/front/views/domy-template.php' => 'Domy',
+            'Modules/Front/views/domy-template.php' => 'Domy',
         );
         if (version_compare(floatval(get_bloginfo('version')), '4.7', '<')) {
             add_filter('page_attributes_dropdown_pages_args', array($this, 'registerTemplates'));
@@ -52,7 +52,7 @@ class CreatorTemplatePage implements IHook {
         if (!isset($this->templates[get_post_meta($post->ID, '_wp_page_template', true)])) {
             return $template;
         }
-        $file = HOUSES_PLUGIN_DIR .'/' . get_post_meta($post->ID, '_wp_page_template', true);
+        $file = HOUSES_PLUGIN_DIR . get_post_meta($post->ID, '_wp_page_template', true);
         if (file_exists($file)) {
             return $file;
         } else {
