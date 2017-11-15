@@ -18,7 +18,7 @@ class CreatorQuery {
      * @return WP_Query qp query
      */
     static function query() {
-        $args = array('post_type' => 'houses');
+        $args = array('post_type' => 'domy');
         if (get_query_var('typy-domow') !== 'wszystkie' && !empty(get_query_var('typy-domow'))) {
             $argsMeta = array(
                 'meta_key' => '_typ-domu',

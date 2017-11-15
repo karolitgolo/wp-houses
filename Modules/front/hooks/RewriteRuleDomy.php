@@ -34,9 +34,7 @@ class RewriteRuleDomy implements IHook {
      * Add typy domów
      */
     function addRewriteTypyDomow() {
-        $page = get_page_by_path('domy');
-        $pageDomyId = $page->ID;
-        add_rewrite_rule('^domy/typy-domow/([^/]*)/?$', 'index.php?page_id=' . $pageDomyId . '&typy-domow=$matches[1]', 'top');
+        add_rewrite_rule('^domy/typy-domow/([^/]*)/?$', 'index.php?post_type=domy&typy-domow=$matches[1]', 'top');
         flush_rewrite_rules();
     }
 

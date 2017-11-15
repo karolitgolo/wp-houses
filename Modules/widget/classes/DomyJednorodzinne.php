@@ -55,7 +55,7 @@ class DomyJednorodzinne extends WP_Widget {
     function widget($args, $instance) {
         $title = apply_filters('widget_title', $instance['title']);
         $argsQuery = array(
-            'post_type' => 'houses',
+            'post_type' => 'domy',
             'meta_key' => '_typ-domu',
             'meta_value' => 'jednorodzinny',
             'nopaging' => false,

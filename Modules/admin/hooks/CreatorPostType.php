@@ -23,7 +23,7 @@ class CreatorPostType implements IHook {
      * Create post type
      */
     function createPostType() {
-        register_post_type('houses', array(
+        register_post_type('domy', array(
             'labels' => array(
                 'name' => __('Domy'),
                 'singular_name' => __('Dom'),
@@ -37,8 +37,8 @@ class CreatorPostType implements IHook {
             'public' => true,
             'has_archive' => true,
             'menu_icon' => 'dashicons-admin-multisite',
-            'with_front' => false,
-            'rewrite' => false,
+            'with_front' => true,
+            'rewrite' => array('slug'=>'domy'),
             'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt'))
         );
     }

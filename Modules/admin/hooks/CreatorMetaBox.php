@@ -16,14 +16,14 @@ class CreatorMetaBox implements IHook {
      * Hook
      */
     public function hook() {
-        add_action('add_meta_boxes_houses', array($this, 'createMetaBoxes'));
+        add_action('add_meta_boxes_domy', array($this, 'createMetaBoxes'));
     }
 
     /**
      * Create meta boxes
      */
     function createMetaBoxes() {
-        add_meta_box('typy-domow', 'Typy domów', array($this, 'viewMetaBoxTypyDomow'), 'houses', 'normal', 'default');
+        add_meta_box('typy-domow', 'Typy domów', array($this, 'viewMetaBoxTypyDomow'), 'domy', 'normal', 'default');
     }
 
     /**

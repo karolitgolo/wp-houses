@@ -27,8 +27,8 @@ class ModuleFront implements IModule {
      */
     public function hooks() {
         $hooks = array(
-            new CreatorTemplatePage(),
-            new AddPageDomy(),
+            //new CreatorTemplatePage(), <-- replace with custom page in template
+            //new AddPageDomy(), <-- replace with custom page in template
             new RewriteRuleDomy()
         );
         foreach ($hooks as $hook){
